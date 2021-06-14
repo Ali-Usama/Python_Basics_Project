@@ -1,5 +1,4 @@
 class Rectangle:
-
     def __init__(self, width, height):
         self.width = width
         self.height = height
@@ -21,7 +20,7 @@ class Rectangle:
 
     def get_picture(self):
         if self.width > 50 or self.height > 50:
-            return 'Too big for picture'
+            return 'Too big for picture.'
 
         lines = ''
         for i in range(self.height):
@@ -44,6 +43,7 @@ class Rectangle:
         return f'Rectangle(width={self.width}, height={self.height})'
 
 
+
 class Square(Rectangle):
     def __init__(self, side):
         super().__init__(width=side, height=side)
@@ -53,30 +53,4 @@ class Square(Rectangle):
         self.width = value
 
     def __str__(self):
-        return f'Square(side={self.height})'
-
-
-
-
-
-
-
-
-
-rect = Rectangle(10, 5)
-print(rect.get_area())
-rect.set_height(3)
-print(rect.get_perimeter())
-print(rect)
-print(rect.get_picture())
-
-sq = Square(9)
-print(sq.get_area())
-sq.set_side(4)
-print(sq.get_diagonal())
-print(sq)
-print(sq.get_picture())
-
-rect.set_height(8)
-rect.set_width(16)
-print(rect.get_amount_inside(sq))
+        return f'Square(side={self.width})'
